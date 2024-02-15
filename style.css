@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    background-size: cover;
+    background: linear-gradient(90deg, rgb(216, 216, 216) 0%, rgba(175, 175, 175, 1) 50%, rgba(101, 101, 101, 1));
+}
+
+html, body{
+    height: 100%;
+}
+
+.challenge-place{
+    display: flex;
+    flex-basis: 400px;
+    background-color: white;
+    margin: 20px 140px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; /* Добавлено */
+    overflow: hidden; /* Добавлено */
+    transition: transform 0.3s ease; /* Добавлено */
+}
+
+img{
+    width: 200px;
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.4);
+}
+
+.text {
+    display: flex; /* Добавлено */
+    align-items: center; /* Добавлено */
+    justify-content: center; /* Добавлено */
+    padding-left: 150px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.challenge-place::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    transition: all 0.3s ease; /* Добавлено */
+}
+
+.challenge-place:hover::before {
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+}
+
+.challenge-place:hover {
+    transform: scale(0.95); /* Уменьшаем на 5% при наведении */
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.3);
+    background-color: rgb(231, 231, 231);
+}
+
+
+@media screen and (max-width: 1000px) {
+    .challenge-place {
+        flex-basis: calc(100% - 40px); /* Растягиваем элемент на всю ширину с отступами по 20px */
+        margin-left: 30px; /* Устанавливаем отступы по 20px со всех сторон */
+        margin-right: 30px;
+        padding: 20px; /* Уменьшаем отступы внутри элемента */
+    }
+    
+    .text {
+        padding-left: 30px; /* Уменьшаем отступ слева */
+        font-size: 20px; /* Уменьшаем размер текста */
+    }
+    
+    img {
+        width: 100px;
+        height: auto; /* Уменьшаем ширину изображений */
+    }
+}

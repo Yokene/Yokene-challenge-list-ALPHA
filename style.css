@@ -12,7 +12,7 @@ html, body{
 .challenge-place{
     display: flex;
     flex-basis: 400px;
-    background-color: white;
+    background: linear-gradient(70deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 50%, rgba(218,218,218,1) 100%);
     margin: 20px 140px;
     padding: 20px;
     border-radius: 10px;
@@ -77,5 +77,49 @@ img{
     img {
         width: 100px;
         height: auto; /* Уменьшаем ширину изображений */
+
+    }
+
+}
+.nav-btn {
+    width: 350px;
+    height: 35px;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: solid 0.1px #fafafa;
+    background-color: rgb(243, 243, 243);
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавлено */
+}
+
+
+.nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 15px rgba(35, 35, 35, 0.3);
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+.nav-btn a{
+    color: inherit; /* Использовать цвет, унаследованный от родительского элемента */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+.links{
+    text-decoration: none;
+}
+
+.nav{
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    .nav-btn {
+        width: 180px; /* Уменьшаем ширину кнопок на мобильных устройствах */
+        height: 30px; /* Уменьшаем высоту кнопок на мобильных устройствах */
+        margin: 5px;
+        font-size: 15px; /* Уменьшаем размер шрифта на мобильных устройствах */
     }
 }
